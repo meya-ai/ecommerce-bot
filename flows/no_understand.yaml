@@ -1,0 +1,9 @@
+name: no_understand
+states:
+    first:
+        component: meya.text
+        properties:
+            text: >
+                Sorry, I don't understand. Would you like to speak to a 
+                live agent?
+        return: true

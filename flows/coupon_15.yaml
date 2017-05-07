@@ -1,0 +1,45 @@
+name: coupon_15
+states:
+    spam:
+        component: meya.text
+        properties:
+            text: >
+                The coupon may take some time to arrive in your inbox, and check
+                your spam folder in case it was redirected.
+        delay:
+            relative: 2
+    new_coupon:
+        component: meya.nlp_yes_no
+        properties:
+            text: "Would you like me to send you a new one?"
+        transitions:
+            'yes': email
+            'no': anything_else
+    email:
+        component: meya.input_pattern
+        properties:
+            text: "What's your email address?"
+            pattern: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$
+            output: email
+            scope: flow
+            require_match: true
+    order_confirm:
+        component: meya.text
+        properties:
+            text: Thanks. One moment while I send you a new coupon...
+        delay:
+            relative: 3
+    order_status:
+        component: meya.text
+        properties:
+            text: >
+                I've sent a new 15% coupon code to {{ flow.email }}.
+                It may take a few minutes to arrive.
+        delay:
+            relative: 3
+        return: true
+    anything_else:
+        component: meya.text
+        properties:
+            text: "Let me know if there's anything else I can help you with."
+        return: true

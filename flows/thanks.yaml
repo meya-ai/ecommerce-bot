@@ -1,0 +1,6 @@
+name: thanks
+states:
+    first:
+        component: meya.text
+        properties:
+            text: "You're welcome! Happy to help \U0001F60A"

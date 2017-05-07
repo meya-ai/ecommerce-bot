@@ -1,0 +1,27 @@
+name: returns
+states:
+    summary:
+        component: meya.text
+        properties:
+            text: >
+                We offer free returns for all U.S. orders and include a UPS
+                return label in your package for easy return shipment.
+        delay:
+            relative: 2
+    eligibility:
+        component: meya.text
+        properties:
+            text: >
+                In order to receive a refund, the merchandise must be returned
+                within 14 business days of delivery in the exact condition in
+                which it was shipped with this return form.
+        delay:
+            relative: 4
+    processing:
+        component: meya.text
+        properties:
+            text: >
+                Please allow up to 7 business days from the date we receive
+                your package to process your return.
+        delay:
+            relative: 2

@@ -1,0 +1,57 @@
+name: greeting
+intents:
+    hi: hi
+    help: help
+    how_are_you: how_are_you
+    who_are_you: who_are_you
+    whats_up: whats_up
+states:
+    hi:
+        component: meya.random_text
+        properties:
+            responses:
+            - "Hey there! \U0001F604"
+            - "Hi! \U0001F604"
+            - "Hello! \U0001F604"
+        delay:
+            relative: 1
+        transitions:
+            next: help
+    how_are_you:
+        component: meya.random_text
+        properties:
+            responses:
+            - "Great! Thanks for asking."
+            - "Pretty, pretty good. \U0001F604"
+            - "Life is good!"
+        delay:
+            relative: 1
+        transitions:
+            next: help
+    who_are_you:
+        component: meya.random_text
+        properties:
+            responses:
+            - "I'm a customer service bot. I'm here to help."
+            - "I'm a friendly bot."
+            - "I think of myself as a nice robot. \U0001F604"
+        delay:
+            relative: 1
+        transitions:
+            next: help
+    whats_up:
+        component: meya.random_text
+        properties:
+            responses:
+            - "Not much. Just chillin'"
+            - "Life is good!"
+            - "Not too much. Just working. Can't complain."
+        delay:
+            relative: 1
+        transitions:
+            next: help
+    help:
+        component: meya.text
+        properties:
+            text: How can I help you today?
+

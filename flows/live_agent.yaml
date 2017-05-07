@@ -1,0 +1,6 @@
+name: live_agent
+states:
+    first:
+        component: meya.text
+        properties:
+            text: live_agent

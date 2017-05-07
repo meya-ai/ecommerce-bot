@@ -1,0 +1,40 @@
+name: cancel_order
+states:
+    first:
+        component: meya.text
+        properties:
+            text: "{{ cms.cancel.sorry }}"
+        delay:
+            relative: 1
+    email:
+        component: meya.input_pattern
+        properties:
+            text: "{{ cms.cancel.email }}"
+            pattern: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$
+            output: email
+            scope: flow
+            require_match: true
+    order_number:
+        component: meya.input_pattern
+        properties:
+            text: "{{ cms.cancel.order_number }}"
+            pattern: ^[0-9]{8,12}$
+            output: order_number
+            scope: flow
+            require_match: true
+    order_confirm:
+        component: meya.text
+        properties:
+            text: "{{ cms.cancel.confirm }}"
+        delay:
+            relative: 3
+    order_status:
+        component: meya.text
+        properties:
+            text: "{{ cms.cancel.status }}"
+        delay:
+            relative: 3
+    anything_else:
+        component: meya.text
+        properties:
+            text: "{{ cms.cancel.anything_else }}"

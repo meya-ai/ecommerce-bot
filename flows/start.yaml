@@ -1,0 +1,17 @@
+name: start
+states:
+    start:
+        component: meya.text
+        properties:
+            text: "Hi! How can I help you today? \U0001F603 \U0001F45B"
+        delay:
+            relative: 1
+    demo:
+        component: meya.text
+        properties:
+            text: >
+                This is a demo bot running on Meya. You can say things like
+                "Where is my order?", "Can you cancel my order?",
+                "How do I return an item?", "Why is my coupon code not working?"
+        return: true
+

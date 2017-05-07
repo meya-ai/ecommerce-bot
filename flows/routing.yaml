@@ -1,0 +1,23 @@
+name: routing
+intents:
+    order_status: order_status
+    coupon_problem: coupon_problem
+    returns: returns
+    cancel_order: cancel_order
+    live_agent: live_agent
+states:
+    order_status:
+        flow: order_status
+        return: true
+    coupon_problem:
+        flow: coupon_15
+        return: true
+    returns:
+        flow: returns
+        return: true
+    cancel_order:
+        flow: cancel_order
+        return: true
+    live_agent:
+        flow: live_agent
+        return: true

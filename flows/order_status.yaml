@@ -1,0 +1,36 @@
+name: order_status
+states:
+    first:
+        component: meya.text
+        properties:
+            text: "I can definitely help you with that."
+        delay:
+            relative: 1
+    order_number:
+        component: meya.input_pattern
+        properties:
+            text: "What's your order number? (8-12 digits)"
+            pattern: ^[0-9]{8,12}$
+            output: order_number
+            scope: flow
+            require_match: true
+    order_confirm:
+        component: meya.text
+        properties:
+            text: Let me look that up for you. One moment...
+        delay:
+            relative: 3
+    order_status:
+        component: meya.text
+        properties:
+            text: >
+                Order #{{ flow.order_number }} has been shipped
+                and is expected to arrive on time next Tuesday between
+                9a - 12pm.
+        delay:
+            relative: 3
+    anything_else:
+        component: meya.text
+        properties:
+            text: "Let me know if there's anything else I can help you with."
+

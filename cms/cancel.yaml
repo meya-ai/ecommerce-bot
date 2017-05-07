@@ -1,0 +1,38 @@
+-   io: output
+    key: anything_else
+    language: en
+    tag: ''
+    type: string
+    value: Let me know if there's anything else I can help you with.
+-   io: output
+    key: confirm
+    language: en
+    tag: ''
+    type: string
+    value: Thanks. One moment while I cancel your order...
+-   io: output
+    key: email
+    language: en
+    tag: ''
+    type: string
+    value: What's the email address associated with the order?
+-   io: output
+    key: order_number
+    language: en
+    tag: ''
+    type: string
+    value: What's your order number? (8-12 digits)
+-   io: output
+    key: sorry
+    language: en
+    tag: ''
+    type: string
+    value: I'm sorry to hear that, but I can definitely help you. I just need to ask
+        a few questions first.
+-   io: output
+    key: status
+    language: en
+    tag: ''
+    type: string
+    value: 'Order #{{ flow.order_number }} has been cancelled. Your credit card has
+        been refunded.'
