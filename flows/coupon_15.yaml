@@ -1,4 +1,7 @@
-name: coupon_15
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: coupon_15
 states:
     spam:
         component: meya.text

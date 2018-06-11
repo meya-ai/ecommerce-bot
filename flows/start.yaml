@@ -1,4 +1,7 @@
-name: start
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: __start__
 states:
     start:
         component: meya.text

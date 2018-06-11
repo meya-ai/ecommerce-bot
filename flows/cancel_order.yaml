@@ -1,4 +1,7 @@
-name: cancel_order
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: cancel_order
 states:
     first:
         component: meya.text

@@ -1,4 +1,8 @@
-name: routing
+triggers:
+  - type: meya.wit
+    properties:
+        min_confidence: 0.9
+        token: GLFOUYKWKQDHSM57HPYEIC7RPKIIL3ZK
 intents:
     order_status: order_status
     coupon_problem: coupon_problem

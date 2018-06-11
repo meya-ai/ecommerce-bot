@@ -1,4 +1,7 @@
-name: returns
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: returns
 states:
     summary:
         component: meya.text

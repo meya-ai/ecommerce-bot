@@ -1,4 +1,7 @@
-name: live_agent
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: __live_agent__
 states:
     first:
         component: meya.text

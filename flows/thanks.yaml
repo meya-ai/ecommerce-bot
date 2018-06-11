@@ -1,4 +1,7 @@
-name: thanks
+triggers:
+  - type: meya.regex
+    properties:
+        pattern: \bthank(s)?\b
 states:
     first:
         component: meya.text

@@ -1,4 +1,5 @@
-name: greeting
+triggers:
+  - type: meya.greetings
 intents:
     hi: hi
     help: help

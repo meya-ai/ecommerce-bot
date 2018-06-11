@@ -1,4 +1,7 @@
-name: order_status
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: order_status
 states:
     first:
         component: meya.text
